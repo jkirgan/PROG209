@@ -9,8 +9,10 @@
 <script>
 var text = "";
 var i = 1;
+//while loop to establish a break when 300 is reached
 while (i <= 300) 
 {
+    //nested if and else if statements for logic handling.  First one tests for divisible by 5&3 while the second tests for divisible by 7.
     if (i % 5 == 0 && i% 3 ==0) 
     {
     text += "<br>FIZZFUZZ ";
@@ -37,7 +39,8 @@ var numLines = 7;
 var len = 7;
 var text ="";
 
-
+//nested for loops to handle logic.  First for loop determines how many times second loop runs based on numLines value and decrements numLines by 1 each pass.  
+//Second loop determines how many hash marks to place in based on numLines value 
 for (i = 0; i < numLines; i++) 
 {
     for (j = 0; j < len; j++) 
