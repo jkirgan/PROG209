@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="write1"></p>
+<p id="write2"></p>
+
+
+<script>
+var text = "";
+var i = 1;
+while (i <= 300) 
+{
+    if (i % 5 == 0 && i% 3 ==0) 
+    {
+    text += "<br>FIZZFUZZ ";
+    }
+    
+    else if (i % 7 == 0 && i % 5 != 0) 
+    {
+    text += "<br>FUZZ ";
+    }
+    
+    else 
+    {
+      text += "<br>The number is " + i;      
+    }
+    i++;
+}
+document.getElementById("write1").innerHTML = text;
+</script>
+
+<script>
+var hash = "#";
+var i;
+var numLines = 7;
+var len = 7;
+var text ="";
+
+
+for (i = 0; i < numLines; i++) 
+{
+    for (j = 0; j < len; j++) 
+    {
+        text += hash + "";
+        
+        
+    }
+    text += "<br>";
+    len = len -1;
+
+}
+
+document.getElementById("write2").innerHTML = text;
+
+</script>
+
+
+</body>
+</html>
