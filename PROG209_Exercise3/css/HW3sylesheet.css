@@ -1,0 +1,46 @@
+﻿body{    
+}
+.toppanel {
+    /* text-align:center;*/
+    background-color: aquamarine;
+    height: 10%;
+    overflow: hidden;
+    text-indent: 3mm;
+}
+.bottompanel {
+    text-align:center;
+    background-color:antiquewhite;
+    height:5%;
+    overflow:hidden;
+}
+.container {
+    margin: auto;
+    width: 50%;
+}
+.imgparent{
+    position:relative;
+    top: 0;
+    left: 0;
+    height: 73.3vh;
+    overflow:hidden;
+}
+.image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    width:75%;
+}
+
+.image2 {
+    position: absolute;
+    top: 220px;
+    left: 220px;
+}
+.rightpanel {
+    text-align:center;
+    float: right;
+    width:25%;
+    height:100%;
+    background-color: burlywood;
+}
