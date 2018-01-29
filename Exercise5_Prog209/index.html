@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../CSS/StyleSheet.css">
+    <title></title>
+</head>
+<body>
+
+<script>
+function colorPicker()
+{
+    /**
+     * When googling use the keyword javascript 
+     */
+
+    var Red = document.getElementById("red").value;
+    var Green = document.getElementById("green").value;
+    var Blue = document.getElementById("blue").value;
+    localStorage.setItem("saveRed", Red);
+    localStorage.setItem("saveGreen", Green);
+    localStorage.setItem("saveBlue", Blue);
+
+
+        if (Red <= 255 && Green <= 255 && Blue <= 255) {
+         
+        document.getElementById("colorbox").style.backgroundColor = 'rgb(' + Red + ',' + Green + ',' + Blue + ')';
+    }
+
+    else {
+        window.alert("Please only enter a number betwen 0 and 255")
+        location.reload();  
+    }    
+     
+        
+        
+}
+    </script>
+    
+    <script>
+        function colorReset()
+          {
+              location.reload();
+          }
+    </script>
+    
+
+    <div id="container">
+        <h2>CSS Color Displayer</h2>
+        
+        <h4>Select a number from 0 to 255 for red, green and blue.  Then hit submit to see your creation!</h4>
+        <form class="rgbInput">
+            Red: 
+            <input id="red"  type="text" placeholder="0">
+            Green: 
+            <input id="green" type="text" placeholder="0">
+            Blue: 
+            <input id="blue" type="text" placeholder="0">
+            
+            <input type="button" value="Submit" onclick="return colorPicker();">
+            
+            <input type="button" value="Clear" onclick="return colorReset();"/>
+            <br />
+            <br />
+            <br />
+        </form>
+        <br />
+        <br />
+        <br />
+
+        <div id="colorbox"></div>
+
+    </div>
+</body>
+</html>

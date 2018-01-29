@@ -1,0 +1,145 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 5 Web Storage</title>
+
+<link href="../CSS/reset.css" type="text/css" rel="stylesheet" />
+
+<link href="../CSS/webStorage_Style.css" type="text/css" rel="stylesheet" />
+
+<script>
+window.addEventListener("load",init);
+
+function init(){
+	if(typeof(Storage)!=="undefined"){
+	
+	display();
+	
+	var button=document.getElementById("button");
+	button.addEventListener("click",saveInfo);
+	}
+	
+	else{
+	//old bowser	
+	}
+}
+
+    function saveInfo() {
+
+    var userDoughnut = getRadioVal(document.getElementById('baseDoughnut'), 'doughnut');
+    var userTopping = getRadioVal(document.getElementById('baseToppings'), 'topping');
+    var orderName = document.getElementById("orderName").value;
+	var comments=document.getElementById("comments").value;
+
+    localStorage.setItem("userDoughnut", userDoughnut);
+    localStorage.setItem("userTopping", userTopping);
+    localStorage.setItem("orderName", orderName);
+	localStorage.setItem("userComments",comments);
+	
+	
+	display();
+	
+}
+
+function display(){
+    var rightBox = document.getElementById("useroutput");
+    var userDoughnut = localStorage.getItem("userDoughnut")
+    var userTopping = localStorage.getItem("userTopping")
+    var orderName = localStorage.getItem("orderName");
+	var theComments=localStorage.getItem("userComments");
+
+
+	if(theComments==undefined){
+		document.getElementById("useroutput").innerHTML="";
+	}
+    else {
+        document.getElementById("useroutput").innerHTML = "OUTPUT  <hr /><br /><br />Base Doughnut: " + userDoughnut + " <br /><br /> Topings chosen: " + userTopping +   " <br /><br /> Name for order: " + orderName+"<br /><br />  Special Instructions: "+theComments;
+	}
+	
+}
+
+</script>
+
+<script>
+
+    function getRadioVal(form, name) {
+        var val;
+        // get list of radio buttons with specified name
+        var radios = form.elements[name];
+
+        // loop through list of radio buttons
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) { // radio checked?
+                val = radios[i].value; // if so, hold its value in val
+                break; // and break out of for loop
+            }
+        }
+        return val; // return value of checked radio or undefined if none checked
+    }
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="main">
+	<section id="userinput">
+    INPUT <br>
+	<hr />
+    
+        <p>Please choose your base doughnut</p>
+        
+        <form id="baseDoughnut">
+            <img src="images/plain_doughnut.png" alt="plain_doughnut" height="25" width="30" />
+            <input type="radio" name="doughnut" value="Plain"> Plain<br>
+            <img src="images/maplebar.png" alt="maplebar" height="25" width="30" />
+            <input type="radio" name="doughnut" value="Maple bar"> Maple Bar
+        </form>  
+    <br />
+        <br />
+        <p>Please choose your toppings</p>
+        
+        <form id="baseToppings">
+            <img src="images/frosting_doughnut.jpg" alt="frosting_doughnut" height="25" width="30" />
+            
+            <input type="radio" name="topping" value="The origonal! Frosting only"> Frosting only<br>
+            
+            <img src="images/captainCrunch.jpg" alt="captain_crunch" height="25" width="30" />
+            
+            <input type="radio" name="topping" value="Arrgh the captain it be!"> Captain Crunch<br />
+            
+            <img src="images/maple-bacon-donuts-5.jpg" alt="bacon_bar" height="25" width="30" />
+            
+            <input type="radio" name="topping" value="Bbbuh bacon burbon bar"> Bacon Burbon Bar<br>
+            
+            <img src="images/kitchenSink.jpg" alt="kitchen_sink" height="25" width="30" />
+            
+            <input type="radio" name="topping" value="Clink Clink Kitchen Sink"> Kitchen Sink
+        </form>
+        <form>
+            <br />
+            <div>Name for order: <br /><input type="input" id="orderName" size="20"></div>
+            <br />
+            <div>Special Instructions - EG;"Deep fried please!"<br /> <textarea id="comments" rows="5"></textarea></div>
+            <br />
+            <div><input type="button" id="button" value="Save"></div>
+
+        </form>
+    </section>
+    
+    
+    <section id="useroutput">
+ OUTPUT  
+ 	<hr />
+    <br /><br />
+    </section>
+
+</div>
+
+
+
+</body>
+</html>

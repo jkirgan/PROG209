@@ -1,0 +1,22 @@
+﻿#container {
+    background-color: beige;
+    margin: auto;
+    width: 25%;
+    border: 3px solid green;
+    padding: 10px;
+
+}
+
+#colorbox {
+    border: 3px solid black;
+    height: 50px;
+    background-color: lightcoral;
+}
+
+input[type="text"]{
+    width:14%;
+}
+input[type="button"]{
+    width:20%;
+    float:right;
+}
