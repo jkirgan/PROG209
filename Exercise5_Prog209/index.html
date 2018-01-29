@@ -11,7 +11,8 @@
 function colorPicker()
 {
     /**
-     * When googling use the keyword javascript 
+     * When googling use the keyword javascript
+     * Below we will be saving the values for our RGB input based on user values and then will save it
      */
 
     var Red = document.getElementById("red").value;
@@ -21,7 +22,7 @@ function colorPicker()
     localStorage.setItem("saveGreen", Green);
     localStorage.setItem("saveBlue", Blue);
 
-
+    /*Logic to ensure user has input numbers within range and not text or out of range*/
         if (Red <= 255 && Green <= 255 && Blue <= 255) {
          
         document.getElementById("colorbox").style.backgroundColor = 'rgb(' + Red + ',' + Green + ',' + Blue + ')';
@@ -38,6 +39,9 @@ function colorPicker()
     </script>
     
     <script>
+        /**
+         * Function to reset the page if the user wants to clear
+         */
         function colorReset()
           {
               location.reload();
