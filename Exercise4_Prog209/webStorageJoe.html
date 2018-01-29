@@ -27,6 +27,10 @@ function init(){
 
     function saveInfo() {
 
+        /**
+         * The following will grab the store the variables for our doughnut journey and then save it
+        NOTE -- userDoughnut and userTopping leverage getRadioVal to determine what the end user chose
+         */
     var userDoughnut = getRadioVal(document.getElementById('baseDoughnut'), 'doughnut');
     var userTopping = getRadioVal(document.getElementById('baseToppings'), 'topping');
     var orderName = document.getElementById("orderName").value;
@@ -41,7 +45,9 @@ function init(){
 	display();
 	
 }
-
+    /**
+     * Uses the above stored items and prints them to the output screen
+     */
 function display(){
     var rightBox = document.getElementById("useroutput");
     var userDoughnut = localStorage.getItem("userDoughnut")
@@ -62,7 +68,11 @@ function display(){
 </script>
 
 <script>
-
+    /**
+     * 
+      This will take in two paramaters FORM, and NAME and then return the chosen radio buttons NAME
+     
+     */
     function getRadioVal(form, name) {
         var val;
         // get list of radio buttons with specified name
