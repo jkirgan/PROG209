@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,17 +11,17 @@
 
     <script>
 
+      //added var text as place holder to be used later
       var planetNames = ["Jupiter", "Venus", "Saturn", "Mars", "Zenzibar"];
       var distancesFromEarth = [5.2, 0.72, 9.5, 1.5,7.3];
       var sunnyInAugust = [false, true, false, true, true];
       var text ="";
-      //var test = text.color("green");
       
       
       
       //Display the planet information
       for (var i = 0; i < planetNames.length; i++) {
-          
+          //changed to text += and added fontcolor/bold for planet names
           text += planetNames[i].fontcolor("green").bold();
           text += "<br>";
           text += distancesFromEarth[i];
@@ -37,12 +37,11 @@
       
       
       //Find the sunny planets
-      //document.getElementById("main").innerHTML= document.write("These planets are sunny in August:");
-      //console.log("These planets are sunny in August:");
+      
 
       for (var i = 0; i < planetNames.length; i++) {
           if (sunnyInAugust[i]) {
-              //console.log(planetNames[i]);
+              //as above
               
               text += planetNames[i].fontcolor("green").bold();
               text += " is sunny in august";
@@ -53,7 +52,10 @@
       
      
       document.getElementById("main").innerHTML = text;
-      //Find the closest planet
+      /**
+       *
+        Not requested in homework but included in parent document
+       //Find the closest planet
 
       var closestPlanet = "";
       var shortestDistance = 10;
@@ -68,8 +70,8 @@
     
       console.log("Closest planet: " + closestPlanet);
       console.log("Shortest distance: " + shortestDistance);
-   
-    </script>
+   */
+    </script>-->
 
     
 
