@@ -1,62 +1,15 @@
 <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
 <html>
 <body>
 
-<p id="write1"></p>
-<p id="write2"></p>
+<div id="main">
+    <p>TEST</p>
+</div>
 
 
-<script>
-var text = "";
-var i = 1;
-//while loop to establish a break when 300 is reached
-while (i <= 300) 
-{
-    //nested if and else if statements for logic handling.  First one tests for divisible by 5&3 while the second tests for divisible by 7.
-    if (i % 5 == 0 && i% 3 ==0) 
-    {
-    text += "<br>FIZZFUZZ ";
-    }
-    
-    else if (i % 7 == 0 && i % 5 != 0) 
-    {
-    text += "<br>FUZZ ";
-    }
-    
-    else 
-    {
-      text += "<br>The number is " + i;      
-    }
-    i++;
-}
-document.getElementById("write1").innerHTML = text;
-</script>
-
-<script>
-var hash = "#";
-var i;
-var numLines = 7;
-var len = 7;
-var text ="";
-
-//nested for loops to handle logic.  First for loop determines how many times second loop runs based on numLines value and decrements numLines by 1 each pass.  
-//Second loop determines how many hash marks to place in based on numLines value 
-for (i = 0; i < numLines; i++) 
-{
-    for (j = 0; j < len; j++) 
-    {
-        text += hash + "";
-        
-        
-    }
-    text += "<br>";
-    len = len -1;
-
-}
-
-document.getElementById("write2").innerHTML = text;
-
-</script>
 
 
 </body>

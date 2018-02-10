@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <title></title>
+</head>
+<body>
+
+   
+    <div id="main">
+        <div id="content">
+
+            <img id="fillVoid" src="../Images/room55.gif" />
+            <p id="output">With a snicker-snack of your magical spear you delt blow after blow to the creature.  Its claws sought to rend you but your shield had a mind of its own and met them mid swing time and time again.  In the end it drew one last ragged breath, blood flecking its spittle, and died a quiet death fitting for a creature of the shadows.  The child you found is the only living soul who will ever believe you and with her parents dead you are now her sole guardian. Years later you and that child live a more peaceful life and when asked about your mementos you laugh them off as if they aren’t anything special.  But you both know and someday you will hand those tools down to her for if another creature takes up residence in the undercroft someone will need to deal with it.</p>
+            
+            <div id="buttonholder2">
+                <h3 id="alert"></h3>
+                <br />
+                <p>Enter the name of they who has slain the beast of undercroft below!</p>
+                <form name="heroForm" onsubmit="return validateForm()">
+                    <input type="text" name="heroName">
+                    <input type="submit" value="Submit">
+                </form>
+                <br />
+                
+            </div>
+
+        </div>
+        <br /><br />
+        <br /><br />
+<footer><sub>**To play again simply close this page and select new game.**</sub></footer>
+    </div>
+
+
+            
+
+    <script>
+
+        //function takes in input from above heroForm then stores in input variable
+        function validateForm() {
+
+
+            let input = document.forms["heroForm"]["heroName"].value;
+            //evaluates if input is empty, if empty throw error message, else print input + message
+            if (input == "") {
+                
+                document.getElementById("alert").innerHTML = "To be remembered a hero must declare their name!";
+                
+                return false;
+            }
+            else {
+
+                //takes provided string and forces it to be lower case for message
+                document.getElementById("alert").innerHTML = "Hail to " + input.toLowerCase() + " hero of undercroft!";
+                return false;
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
