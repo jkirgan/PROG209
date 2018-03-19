@@ -1,4 +1,4 @@
-Cheat sheet!
+Cheat sheet!\
 
 Easy ending
 
@@ -14,8 +14,6 @@ BAM GAME IS DONE!
 To win the game
 
 Hit new game --
-
-Type;
 
 Go south
 
