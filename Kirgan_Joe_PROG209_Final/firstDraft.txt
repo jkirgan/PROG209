@@ -1,0 +1,8 @@
+For my game I decided to go with a mad max theme!  You will be racing across the desert attempting to get back to your garage before the war party finds you or you run out of gas.
+
+I have a whole host of pngs for the car, monster, background, startup, etc.  I have found all of these images through googles image search.
+
+ES6;  I will be using; let instead of var, const for my audio, template literal for logging
+
+I decided to go with green socks because I had so much fun with it!  I will be animating the opening words and start button.  Then I will have it animate away the start div.
+

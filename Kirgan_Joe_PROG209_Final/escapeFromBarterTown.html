@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mad Max: Escape from barter town</title>
+    <link rel="stylesheet" type="text/css" href="css/gameCSS.css" />
+</head>
+<body>
+    <section id="game" class="center">
+        <div id="container">
+            <div id="startScreen">
+                <div id="txt1">escape</div>
+                <div id="txt2">from</div>
+                <div id="txt3">barter town</div>
+                <button id="startBtn" onclick="hideGame()">START</button>
+                <br />
+                <img id="startImg" src="images/madmax.jpg" />
+                
+            </div>
+            <div id="gameBoard">
+                <br />
+                <h1>Mad Max:</h1>
+                <h3>Escape from barter town</h3>
+                <div id="stage"></div>
+                <p id="output"></p>
+            </div>
+        </div>
+        <div id="winBoard">
+            <img src="images/garage.png"/>
+            <p id="output2"></p>
+        </div>
+        <div id="instructions">
+            <p>       <img src="images/arrows.png" width="30" height="40" /> : Use Arrow keys to move
+                <br />
+                <br /><img src="images/oilRig.png" width="30" height="30" /> : Oil Rigs
+                <br />Trade bullets here for guzzle.
+                <br />
+                <br /><img src="images/warBoy.png" width="30" height="30" />: War Boy Camps
+                <br /> Attack for guzzle and more bullets.
+                <br />
+                <br /><img src="images/hunterKiller.png" width="40" height="40" />: Hunting Party
+                <br /> If they catch  you the game ends.
+                <br />
+                <br /><img src="images/garage.png" width="40" height="40" />: Your garage
+                <br />Get here safely to win the game.
+            </p>
+
+
+
+        </div>
+
+        
+    </section>
+
+    <audio id="themeMusic" autoplay>
+        <source src="../audio/musicBackground.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="noGas">
+        <source src="../audio/noGas.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <audio id="warParty">
+        <source src="../audio/warBoyMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winMusic">
+        <source src="../audio/winMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="Java/gameJava.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script type="text/javascript" src="Java/animation.js"></script>
+</body>
+</html>
+
